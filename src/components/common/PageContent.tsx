@@ -137,7 +137,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/top-actions/ic_cmap.svg`}
                 />
               }
             >
@@ -149,7 +149,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/top-actions/ic_tileset.svg`}
                 />
               }
             >
@@ -161,7 +161,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/top-actions/ic_enrich.svg`}
                 />
               }
             >
