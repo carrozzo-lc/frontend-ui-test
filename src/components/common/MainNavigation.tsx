@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     listItem: {
       paddingLeft: 13,
-    }
+    },
   }),
 );
 
@@ -29,7 +29,11 @@ export default function MainNavigation({ navConfig, isOpen }: any) {
       <List className={classes.listRoot}>
         {navConfig.map((item: any, index: number) => {
           return (
-            <ListItem className={classes.listItem} button key={`item-${item.title}-${index}`}>
+            <ListItem
+              className={classes.listItem}
+              button
+              key={`item-${item.title}-${index}`}
+            >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText
                 primary={item.title}
@@ -54,7 +58,7 @@ export default function MainNavigation({ navConfig, isOpen }: any) {
         <ListItem className={classes.listItem} button>
           <ListItemIcon>
             <SvgIconStyle
-              src={`/assets/icons/navbar/ic_developers.svg`}
+              src={`/frontend-ui-test/assets/icons/navbar/ic_developers.svg`}
               sx={{ width: 1, height: 1 }}
             />
           </ListItemIcon>

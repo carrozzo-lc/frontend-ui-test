@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Drawer, useMediaQuery } from '@material-ui/core';
 import { CustomTheme } from 'theme';
-import MainNavigation from './MainNavigation';
+import MainNavigation from '../../components/common/MainNavigation';
 
 const drawerWidth = 240;
 

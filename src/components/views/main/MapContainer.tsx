@@ -14,6 +14,8 @@ const Map = lazy(
 
 const useStyles = makeStyles((theme) => ({
   mapWrapper: {
+    width: '100%',
+    height: 'calc(100% - 273px)',
     position: 'relative',
     display: 'flex',
     flex: '1 1 auto',

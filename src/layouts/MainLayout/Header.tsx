@@ -22,7 +22,7 @@ import { ReactComponent as CartoLogo } from 'assets/img/carto-logo.svg';
 import { ReactComponent as CartoLogoXS } from 'assets/img/carto-logo-xs.svg';
 import { ROUTE_PATHS } from 'routes';
 import { CustomTheme } from 'theme';
-import MainNavigation from './MainNavigation';
+import MainNavigation from '../../components/common/MainNavigation';
 
 const useStylesCommon = makeStyles((theme) => ({
   title: {

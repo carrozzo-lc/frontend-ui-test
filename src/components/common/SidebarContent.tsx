@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     width: 24,
     height: 24,
     backgroundColor: theme.palette.action.hover,
-  }
+  },
 }));
 
 export default function SidebarContent() {
@@ -133,7 +133,13 @@ export default function SidebarContent() {
               <AddCircleOutlineIcon style={{ fontSize: 18 }} />
             </Box>
           </ListItemIcon>
-          <ListItemText primary='add new connections' />
+          <ListItemText
+            primary='Add new connections'
+            primaryTypographyProps={{
+              variant: 'subtitle2',
+              color: 'textSecondary',
+            }}
+          />
         </ListItem>
       </List>
     </Box>

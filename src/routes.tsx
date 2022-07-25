@@ -1,7 +1,7 @@
 import { lazy } from 'react';
-// import ProtectedRoute from 'components/common/ProtectedRoute';
+import { Navigate } from 'react-router-dom';
 import DefaultView from 'components/common/DefaultView';
-import MainLayout from 'layouts/MainLayout';
+import MainLayout from './layouts/MainLayout';
 
 const Main = lazy(
   () => import(/* webpackPrefetch: true */ 'components/views/main/Main'),
@@ -19,17 +19,12 @@ export const ROUTE_PATHS = {
 
 const routes = [
   {
-    path: ROUTE_PATHS.DEFAULT,
-    element: (
-      // <ProtectedRoute>
-      <MainLayout>
-        <Main />
-      </MainLayout>
-      // </ProtectedRoute>
-    ),
+    path: '/',
+    element: <MainLayout />,
     children: [
-      // { path: '/', element: <Navigate to='/<your default view>' /> },
-      // [hygen] Add routes
+      { element: <Navigate to={'/frontend-ui-test'} replace />, index: true },
+      { element: <Main />, index: true },
+      { path: 'frontend-ui-test', element: <Main /> },
     ],
   },
   { path: ROUTE_PATHS.LOGIN, element: <Login /> },

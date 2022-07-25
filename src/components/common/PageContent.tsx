@@ -17,6 +17,7 @@ import {
   MapOutlined,
   TableChartOutlined,
 } from '@material-ui/icons';
+import CartTabs from '../common/CartoTabs';
 import SvgIconStyle from './SvgIconStyle';
 
 const useStyles = makeStyles((theme) => ({
@@ -100,7 +101,10 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: 15,
     },
   },
-  tabRoot: {},
+  tabRoot: {
+    width: '100%',
+    height: '100%',
+  },
 }));
 
 export default function PageContent() {
@@ -111,7 +115,12 @@ export default function PageContent() {
     <Box className={classes.root}>
       <Box className={classes.topActionsRoot}>
         <div>
-          <IconButton className={classes.actionBtn} disableRipple disableFocusRipple edge='start'>
+          <IconButton
+            className={classes.actionBtn}
+            disableRipple
+            disableFocusRipple
+            edge='start'
+          >
             <ArrowBack />
           </IconButton>
         </div>
@@ -128,7 +137,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
                 />
               }
             >
@@ -140,7 +149,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
                 />
               }
             >
@@ -152,7 +161,7 @@ export default function PageContent() {
               startIcon={
                 <SvgIconStyle
                   color={theme.palette.primary.main}
-                  src={`/assets/icons/navbar/ic_cmap.svg`}
+                  src={`/frontend-ui-test/assets/icons/navbar/ic_cmap.svg`}
                 />
               }
             >
@@ -218,7 +227,9 @@ export default function PageContent() {
         </Box>
       </Box>
 
-      <Box className={classes.tabRoot}></Box>
+      <Box className={classes.tabRoot}>
+        <CartTabs />
+      </Box>
     </Box>
   );
 }

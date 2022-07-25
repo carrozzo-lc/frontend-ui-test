@@ -1,5 +1,4 @@
-export default function SvgIconStyle({ src, color, ...sx }: any) {
-
+export default function SvgIconStyle({ src, color, ...sx }: any): JSX.Element {
   return (
     <span
       style={{

@@ -1,7 +1,8 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { Outlet } from 'react-router-dom';
 import navConfig from './NavConfig';
-import Header from 'components/common/Header';
-import Navbar from 'components/common/Navbar';
+import Header from './Header';
+import Navbar from './Navbar';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function MainLayout({ children }: { children: JSX.Element }) {
+export default function MainLayout() {
   const classes = useStyles();
 
   return (
@@ -50,7 +51,9 @@ export default function MainLayout({ children }: { children: JSX.Element }) {
 
         <main className={classes.main}>
           <div className={classes.content}>
-            <div className={classes.innerContent}>{children}</div>
+            <div className={classes.innerContent}>
+              <Outlet />
+            </div>
           </div>
         </main>
       </div>

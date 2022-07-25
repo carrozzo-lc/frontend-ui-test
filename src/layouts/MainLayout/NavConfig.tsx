@@ -1,10 +1,10 @@
-import SvgIconStyle from '../components/common/SvgIconStyle';
+import SvgIconStyle from '../../components/common/SvgIconStyle';
 
 // ----------------------------------------------------------------------
 
 const getIcon = (name: string) => (
   <SvgIconStyle
-    src={`/assets/icons/navbar/${name}.svg`}
+    src={`/frontend-ui-test/assets/icons/navbar/${name}.svg`}
     sx={{ width: 1, height: 1 }}
   />
 );
@@ -35,7 +35,7 @@ export const navConfig = [
     path: '/data-explorer',
     icon: ICONS.explorer,
   },
-   {
+  {
     title: 'Data observatory',
     path: '/data-observatory',
     icon: ICONS.observatory,

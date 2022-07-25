@@ -1,4 +1,4 @@
-import Header from 'components/common/Header';
+import Header from 'layouts/MainLayout/Header';
 
 export default function DefaultView({ children }: { children: JSX.Element }) {
   return (
