@@ -1,0 +1,2 @@
+(this["webpackJsonpfrontend-ui-test"]=this["webpackJsonpfrontend-ui-test"]||[]).push([[15],{608:function(s,e){e.printMsg=function(){console.log("This is a message from the demo package")}}}]);
+//# sourceMappingURL=15.d194c1ae.chunk.js.map
