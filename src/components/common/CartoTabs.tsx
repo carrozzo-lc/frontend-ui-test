@@ -1,4 +1,4 @@
-import { lazy, useState, useEffect, ReactNode } from 'react';
+import { lazy, useState, ReactNode } from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Box, Tabs, Tab } from '@material-ui/core';
 
@@ -54,6 +54,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: theme.spacing(4),
     borderBottom: `solid 1px ${theme.palette.divider}`,
   },
+  tabIndicator: {
+    minWidth: 56,
+    backgroundColor: theme.palette.common.black,
+  },
 }));
 
 export default function SimpleTabs() {
@@ -64,11 +68,6 @@ export default function SimpleTabs() {
     setValue(newValue);
   };
 
-  useEffect(() => {
-    // Manually trigger the updateIndicator method.
-    window.dispatchEvent(new CustomEvent('resize'));
-  }, []);
-
   return (
     <div className={classes.root}>
       <div className={classes.tabHead}>
@@ -76,6 +75,9 @@ export default function SimpleTabs() {
           value={value}
           onChange={handleChange}
           aria-label='simple tabs example'
+          classes={{
+            indicator: classes.tabIndicator,
+          }}
         >
           <Tab label='Map' {...a11yProps(0)} />
           <Tab label='Data preview' {...a11yProps(1)} />

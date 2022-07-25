@@ -255,7 +255,10 @@ function UserMenu() {
           color='inherit'
           onClick={handleMenu}
         >
-          <Avatar className={classes.avatar} src={'user.picture'} />
+          <Avatar
+            className={classes.avatar}
+            src='https://i.pravatar.cc/150?img=7'
+          />
         </Link>
       </Grid>
       <Menu
