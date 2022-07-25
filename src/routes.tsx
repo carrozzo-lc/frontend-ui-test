@@ -23,7 +23,6 @@ const routes = [
     element: <MainLayout />,
     children: [
       { element: <Navigate to={'/frontend-ui-test'} replace />, index: true },
-      { element: <Main />, index: true },
       { path: 'frontend-ui-test', element: <Main /> },
     ],
   },

@@ -49,7 +49,7 @@ export default function MainNavigation({ navConfig, isOpen }: any) {
       <List
         subheader={
           <ListSubheader component='div'>
-            <Typography variant='overline'>
+            <Typography variant='overline' color='textSecondary'>
               {isOpen ? 'Go Beyond' : <div style={{ height: 48 }}></div>}
             </Typography>
           </ListSubheader>

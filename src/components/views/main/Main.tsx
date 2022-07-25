@@ -1,11 +1,19 @@
 import { lazy } from 'react';
 import LazyLoadComponent from 'components/common/LazyLoadComponent';
-import SidebarContent from '../../common/SidebarContent';
-import PageContent from '../../common/PageContent';
 
 const Sidebar = lazy(
   () =>
     import(/* webpackChunkName: 'sidebar' */ 'components/views/main/Sidebar'),
+);
+const SidebarContent = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'sidebar' */ 'components/common/SidebarContent'
+    ),
+);
+const PageContent = lazy(
+  () =>
+    import(/* webpackChunkName: 'sidebar' */ 'components/common/PageContent'),
 );
 const ErrorSnackbar = lazy(
   () =>

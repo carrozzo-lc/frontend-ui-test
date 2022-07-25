@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
   actionBtn: {
     color: theme.palette.text.secondary,
   },
-  breadcrumbsRoot: {},
   pageHeaderRoot: {
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(3),
@@ -90,9 +89,6 @@ const useStyles = makeStyles((theme) => ({
   },
   gridRoot: {
     width: 'fit-content',
-    // '& svg': {
-    //   margin: theme.spacing(1.5),
-    // },
     '& hr': {
       margin: theme.spacing(0, 0.5),
     },
@@ -175,23 +171,21 @@ export default function PageContent() {
         </div>
       </Box>
 
-      <Box className={classes.breadcrumbsRoot}>
-        <Breadcrumbs
-          aria-label='breadcrumb'
-          separator={<NavigateNext fontSize='small' />}
-        >
-          <Link color='inherit' href='#'>
-            Data explorer
-          </Link>
-          <Link color='inherit' href='#'>
-            bgconn
-          </Link>
-          <Link color='inherit' href='#'>
-            cartabq
-          </Link>
-          <Typography color='textPrimary'>dataset</Typography>
-        </Breadcrumbs>
-      </Box>
+      <Breadcrumbs
+        aria-label='breadcrumb'
+        separator={<NavigateNext fontSize='small' />}
+      >
+        <Link color='inherit' href='#'>
+          Data explorer
+        </Link>
+        <Link color='inherit' href='#'>
+          bgconn
+        </Link>
+        <Link color='inherit' href='#'>
+          cartabq
+        </Link>
+        <Typography color='textPrimary'>dataset</Typography>
+      </Breadcrumbs>
 
       <Box className={classes.pageHeaderRoot}>
         <div>

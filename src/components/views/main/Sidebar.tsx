@@ -61,7 +61,6 @@ function Desktop({ children }: { children: JSX.Element }) {
       open
     >
       {children}
-      {/* <Outlet /> */}
     </Drawer>
   );
 }
